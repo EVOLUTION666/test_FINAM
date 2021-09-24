@@ -61,15 +61,10 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rootVC = DetailsViewController()
         
-        rootVC.title = news[indexPath.row].title
-        rootVC.descriptionLabel.text = news[indexPath.row].articleDescription
+        rootVC.oneNews = news[indexPath.row]
         
         let navVC = UINavigationController(rootViewController: rootVC)
         self.present(navVC, animated: true)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        <#code#>
-//    }
     
 }

@@ -41,6 +41,7 @@ class DetailsViewController: UIViewController {
     }
     
     func configure() {
+        imageView.load(urlString: oneNews?.urlToImage! ?? "")
         titleLabel.text = oneNews?.title
         descriptionLabel.text = oneNews?.articleDescription
     }
@@ -63,7 +64,11 @@ class DetailsViewController: UIViewController {
     func configureLabels() {
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.numberOfLines = 0
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.numberOfLines = 0
         
         backgroundView.addSubview(titleLabel)
         backgroundView.addSubview(descriptionLabel)

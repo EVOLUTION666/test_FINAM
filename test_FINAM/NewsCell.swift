@@ -35,7 +35,7 @@ class NewsCell: UITableViewCell {
     }
     
     func set(news: Article) {
-        newsImageView.load(urlString: news.urlToImage!)
+        newsImageView.load(urlString: news.urlToImage ?? "")
         newsName.text = news.title
         newsDescription.text = news.articleDescription
     }
