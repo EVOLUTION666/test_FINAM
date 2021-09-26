@@ -8,7 +8,9 @@
 import Foundation
 
 struct Service {
+    let imageCache = NSCache<NSString, NSData>()
     let API_KEY = "ec694b4bb50b4ff48809bc9c0a00a999"
+    
     func fetchData(completionHandler: @escaping ([Article])->()) {
         let url = URL(string: "https://newsapi.org/v2/everything?q=Apple&from=2021-09-17&sortBy=popularity&apiKey=\(API_KEY)")
         
@@ -27,4 +29,5 @@ struct Service {
             }
         }.resume()
     }
+    
 }

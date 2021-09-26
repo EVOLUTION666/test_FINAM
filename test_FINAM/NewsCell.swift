@@ -15,6 +15,8 @@ class NewsCell: UITableViewCell {
     var newsName = UILabel()
     var newsDescription = UILabel()
     
+    let service = Service()
+    
     var stackView = UIStackView()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
