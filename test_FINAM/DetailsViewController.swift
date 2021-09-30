@@ -41,7 +41,8 @@ class DetailsViewController: UIViewController {
     }
     
     func configure() {
-        imageView.load(urlString: oneNews?.urlToImage! ?? "")
+//        imageView.load(urlString: oneNews?.urlToImage! ?? "")
+        imageView.loadImage(fromURL: oneNews?.urlToImage! ?? "")
         titleLabel.text = oneNews?.title
         descriptionLabel.text = oneNews?.articleDescription
     }
